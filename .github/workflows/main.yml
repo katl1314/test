@@ -22,7 +22,7 @@ jobs:
       run: npm run build
 
     - name: 작업 완료1
-      run: cp copy_dist
+      run: cd copy_dist
     
     - name: 작업 완료2
       run: ls -al
