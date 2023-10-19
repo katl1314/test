@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log((function(n,o){return n+o}))})();
+(()=>{"use strict";console.log((function(n,o){return n*o}))})();
