@@ -21,9 +21,6 @@ jobs:
     - name: webpack 빌드
       run: npm run build
 
-    - name: 로컬로 파일 복사
-      run: cp -r dist ./copy_dist
-
-    - name: 작업 완료
-      run: echo "작업 완료"
+    - name: 작업 완료1
+      run: find ./dist
 
