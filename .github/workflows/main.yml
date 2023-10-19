@@ -1,0 +1,29 @@
+name: Webpack Build and Transfer
+
+on: ['push']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout 코드
+      uses: actions/checkout@v2
+
+    - name: Node.js 설치
+      uses: actions/setup-node@v2
+      with:
+        node-version: 16
+
+    - name: 의존성 설치
+      run: npm install
+
+    - name: webpack 빌드
+      run: npm run build
+
+    - name: 로컬로 파일 복사
+      run: cp -r ./dist ./copy_dist
+
+    - name: 작업 완료
+      run: echo "작업 완료"
+
